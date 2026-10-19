@@ -22,7 +22,6 @@ const projectMedia = {
  {src:'media/club-03-enhanced.webp',caption:'Line-following robots at the competition.'},
  {src:'media/club-02-enhanced.webp',caption:'Preparing a mini-sumo robot for a match.'},
  {src:'media/club-01-enhanced.webp',caption:'A club robot on the line-following track.'},
- {src:'media/club-04-enhanced.webp',caption:'Club members at the robotics competition.'},
  {src:'media/project-11-enhanced.webp',caption:'Preparing one of my robots on the competition track.'},
  {src:'media/project-07-enhanced.webp',caption:'One of my competition robot builds and its electronics.'},
  {src:'media/project-08-enhanced.webp',caption:'Robot electronics and competition medal.'},
