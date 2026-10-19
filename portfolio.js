@@ -36,8 +36,8 @@ const projectMedia = {
 const buildOrder=['dispenser','club','drone','delivery'];
 const concise={
  dispenser:{title:'PillDrop',sub:'Alexa-controlled medication & water dispenser',role:'Alexa voice control, embedded code, electronics, motors & CAD.',award:'Team · 1st place / CETYS Engineering Expo 2023',cover:'media/dispenser-interior-enhanced.webp',tags:'ALEXA / ESP32 / ARDUINO / CAD'},
- club:{title:'Built for the track.',sub:'Competition robots · CETYS Robotics Club',role:'Robots I built, from electronics and PCB design to embedded code. Club founding member & president.',award:'1st place / State robotics competition',cover:'media/club-03-enhanced.webp',tags:'EMBEDDED / SENSORS / PID'},
- drone:{title:'Following the trajectory.',sub:'Autonomous drone · MATLAB & Simulink',role:'I developed all the MATLAB and Simulink code for trajectory tracking and control.',award:'Team · 2nd place / MathWorks National Drone Competition',cover:'media/project-06-enhanced.webp',tags:'MATLAB / SIMULINK / CONTROL'},
+ club:{title:'Competition robots',sub:'Competition robots · CETYS Robotics Club',role:'Robots I built, from electronics and PCB design to embedded code. Club founding member & president.',award:'1st place / State robotics competition',cover:'media/club-03-enhanced.webp',tags:'EMBEDDED / SENSORS / PID'},
+ drone:{title:'Drone trajectory control',sub:'Autonomous drone · MATLAB & Simulink',role:'I developed all the MATLAB and Simulink code for trajectory tracking and control.',award:'Team · 2nd place / MathWorks National Drone Competition',cover:'media/project-06-enhanced.webp',tags:'MATLAB / SIMULINK / CONTROL'},
  delivery:{title:'E-Serve',sub:'Autonomous food & water delivery robot',role:'Programming and electronics, integrating ROS, Raspberry Pi, Arduino and LiDAR.',award:'Team · 2nd place / CETYS Engineering Expo 2022',cover:'media/project-05-enhanced.webp',tags:'ROS / LIDAR / RASPBERRY PI'}
 };
 // Photo 5 is a different robot; E-Serve intentionally uses a diagram, not that photo.
