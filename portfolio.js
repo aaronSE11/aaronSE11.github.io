@@ -21,7 +21,7 @@ const projectMedia = {
  club: [
  {src:'media/club-03-enhanced.webp',caption:'Line-following robots at the competition.'},
  {src:'media/prototype-early-black.webp',caption:'An early competition prototype.'},
- {src:'media/prototype-bench.webp',caption:'Prototype electronics on the workbench.'},
+ {src:'media/prototype-bench-cropped.webp',caption:'Prototype electronics on the workbench.'},
  {src:'media/prototype-early-green.webp',caption:'An early robot build during testing.'},
  {src:'media/club-02-enhanced.webp',caption:'Preparing a mini-sumo robot for a match.'},
  {src:'media/project-11-enhanced.webp',caption:'Preparing one of my robots on the competition track.'},
