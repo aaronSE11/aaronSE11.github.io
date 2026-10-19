@@ -30,5 +30,5 @@
 @media(max-width:370px){.cover h1{font-size:87px}.cover .hero-photo{height:300px}.profile-bio>h2{font-size:34px}}
 
 /* Project contribution details */
-.role-copy p{margin:0;font-size:14px;line-height:1.85;max-width:740px}.role-copy p+p{margin-top:18px}.close-dialog,#media-dialog>button{font-family:Arial,sans-serif;font-size:28px;line-height:1;width:44px;height:44px;padding:0;display:grid;place-items:center;flex-shrink:0}.experience-list .institution-name{font-size:23px;line-height:1.35;max-width:760px;text-wrap:pretty}
+.role-copy p{margin:0;font-size:14px;line-height:1.85;max-width:740px}.role-copy p+p{margin-top:18px}.close-dialog,#media-dialog>button{font-family:Arial,sans-serif;font-size:22px;line-height:1;width:44px;height:44px;padding:0;display:grid;place-items:center;flex-shrink:0}.experience-list .institution-name{font-size:23px;line-height:1.35;max-width:760px;text-wrap:pretty}
 @media(max-width:680px){.role-copy p{font-size:13px;line-height:1.8}.experience-list .institution-name{font-size:20px}}
