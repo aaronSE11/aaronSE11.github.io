@@ -28,3 +28,7 @@
 @media(max-width:1000px){.cover h1{font-size:90px}.cover .hero-photo{height:400px}.profile-bio>h2{font-size:42px}.profile-bio>.section-label{font-size:16px}}
 @media(max-width:680px){.cover{grid-template-columns:1fr;padding-top:43px;padding-bottom:55px;gap:35px}.cover h1{font-size:100px;line-height:.91;margin-bottom:25px}.cover .hero-photo{height:360px;transform:rotate(2.5deg)}.cover .hero-scene{margin:0 12px;padding:10px 0 45px 10px}.cover .floating-board{left:-18px;width:40%;transform:rotate(-8deg)}.cover .intro{font-size:12px}.cover .eyebrow{font-size:9px}.cover .available{font-size:9px}.profile-section{padding-top:42px;padding-bottom:45px}.profile-bio{display:block}.profile-bio>.section-label{font-size:15px;margin-bottom:25px}.profile-bio>h2{font-size:38px;margin-bottom:20px}.profile-bio>.intro{margin-bottom:25px}.profile-bio>.profile-education{margin-bottom:25px}.profile-bio>.profile-skills{margin-top:0}}
 @media(max-width:370px){.cover h1{font-size:87px}.cover .hero-photo{height:300px}.profile-bio>h2{font-size:34px}}
+
+/* Project contribution details */
+.role-copy p{margin:0;font-size:14px;line-height:1.85;max-width:740px}.role-copy p+p{margin-top:18px}.close-dialog,#media-dialog>button{font-family:Arial,sans-serif;font-size:28px;line-height:1;width:44px;height:44px;padding:0;display:grid;place-items:center;flex-shrink:0}.experience-list .institution-name{font-size:23px;line-height:1.35;max-width:760px;text-wrap:pretty}
+@media(max-width:680px){.role-copy p{font-size:13px;line-height:1.8}.experience-list .institution-name{font-size:20px}}
