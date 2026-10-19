@@ -10,67 +10,48 @@ const projects = [
 ];
 const projectMedia = {
  dispenser: [
- {src:'media/project-04.jpg',caption:'The dispenser prototype and its internal mechanisms.'},
- {src:'media/project-01.jpg',caption:'3D view of the custom electronics board.'},
- {src:'media/project-02.jpg',caption:'PCB layout in Proteus.'},
- {src:'media/project-03.jpg',caption:'CAD model of the dispensing assembly.'},
- {src:'media/demo-01.mp4',type:'video',poster:'media/project-04.jpg',caption:'A short look inside the working prototype.'}],
- drone: [{src:'media/project-06.jpg',caption:'The drone used for the trajectory-tracking project.'}],
+ {src:'media/dispenser-exterior-enhanced.webp',caption:'PillDrop exterior.'},
+ {src:'media/dispenser-mechanism-enhanced.webp',caption:'Dispensing mechanism and medication tray.'},
+ {src:'media/dispenser-interior-enhanced.webp',caption:'Inside the prototype.'},
+ {src:'media/project-01-enhanced.webp',caption:'3D view of the custom electronics board.'},
+ {src:'media/project-02-enhanced.webp',caption:'PCB layout in Proteus.'},
+ {src:'media/project-03-enhanced.webp',caption:'CAD model of the dispensing assembly.'},
+ {src:'media/demo-01.mp4',type:'video',poster:'media/dispenser-interior-enhanced.webp',caption:'A short look inside the working prototype.'}],
+ drone: [{src:'media/project-06-enhanced.webp',caption:'The drone used for the trajectory-tracking project.'}],
  club: [
- {src:'media/project-11.jpg',caption:'Preparing one of my robots on the competition track.'},
- {src:'media/project-07.jpg',caption:'One of my competition robot builds and its electronics.'},
- {src:'media/project-08.jpg',caption:'Robot electronics and competition medal.'},
- {src:'media/project-09.jpg',caption:'Competition robot and recognition.'},
- {src:'media/project-10.jpg',caption:'Another competition build and recognition.'},
- {src:'media/project-05.jpg',caption:'Electronics and motor integration on another robot I built.'},
- {src:'media/project-12.jpg',caption:'With the team: 1st place at a state robotics competition.'},
- {src:'media/demo-02.mp4',type:'video',poster:'media/project-07.jpg',caption:'Line-following robot demonstration.'}]
+ {src:'media/club-03-enhanced.webp',caption:'Line-following robots at the competition.'},
+ {src:'media/club-02-enhanced.webp',caption:'Preparing a mini-sumo robot for a match.'},
+ {src:'media/club-01-enhanced.webp',caption:'A club robot on the line-following track.'},
+ {src:'media/club-04-enhanced.webp',caption:'Club members at the robotics competition.'},
+ {src:'media/project-11-enhanced.webp',caption:'Preparing one of my robots on the competition track.'},
+ {src:'media/project-07-enhanced.webp',caption:'One of my competition robot builds and its electronics.'},
+ {src:'media/project-08-enhanced.webp',caption:'Robot electronics and competition medal.'},
+ {src:'media/project-09-enhanced.webp',caption:'Competition robot and recognition.'},
+ {src:'media/project-10-enhanced.webp',caption:'Another competition build and recognition.'},
+ {src:'media/project-05-enhanced.webp',caption:'Electronics and motor integration on another robot I built.'},
+ {src:'media/project-12-enhanced.webp',caption:'With the team: 1st place at a state robotics competition.'},
+ {src:'media/demo-02.mp4',type:'video',poster:'media/project-07-enhanced.webp',caption:'Line-following robot demonstration.'}]
 };
-function mediaGallery(p){
- const media=projectMedia[p.id];if(!media)return '';
- return `<section class="project-gallery" aria-label="${p.label} photos and videos"><div class="gallery-heading"><h3>From the build</h3><span>Photos, designs & demonstrations</span></div><div class="gallery-grid">${media.map((m,i)=>`<figure class="gallery-item ${m.type==='video'?'gallery-video':''}">${m.type==='video'?`<video controls playsinline preload="none" poster="${m.poster}" aria-label="${m.caption}"><source src="${m.src}" type="video/mp4">Your browser does not support video. <a href="${m.src}">Open video</a></video>`:`<button class="gallery-image" data-media="${i}" aria-label="Enlarge: ${m.caption}"><img src="${m.src}" alt="${m.caption}" loading="lazy"><span aria-hidden="true">↗</span></button>`}<figcaption>${m.caption}</figcaption></figure>`).join('')}</div></section>`;
-}
-function sketch(type){
-const drawings={
-dispenser:'<rect x="80" y="25" width="140" height="145" rx="10"/><path d="M80 65h140M100 43h30m12 0h30M115 65v40m70-40v40M105 105h20v12h-20zm70 0h20v12h-20zM110 132v20h22v-20m42 0v20h22v-20M70 170h160M45 65q-20 18 0 36m-10-45q-30 26 0 54M257 65q20 18 0 36"/>',
-robot:'<rect x="74" y="100" width="152" height="53" rx="8"/><path d="M95 100V72h111v28M150 72V49m-20 0h40v10h-40zM106 116h87M91 130h18m83 0h18"/><circle cx="101" cy="154" r="18"/><circle cx="199" cy="154" r="18"/><path d="M112 53q38-33 76 0m-91-8q53-47 106 0m-121-9q68-62 136 0" stroke-dasharray="4 6"/>',
-drone:'<path d="M115 72l70 70m0-70-70 70M137 97h26v20h-26z"/><ellipse cx="105" cy="62" rx="32" ry="12"/><ellipse cx="195" cy="62" rx="32" ry="12"/><ellipse cx="105" cy="152" rx="32" ry="12"/><ellipse cx="195" cy="152" rx="32" ry="12"/><path d="M35 150C35 20 270 15 266 132" stroke-dasharray="4 6"/><path d="M255 119l11 13 12-12"/>',
-club:'<rect x="45" y="92" width="87" height="60" rx="8"/><circle cx="65" cy="155" r="13"/><circle cx="113" cy="155" r="13"/><path d="M65 92V73h45v19m-26-19V52m-9 0h18M157 151h89l-11-48h-66zM176 103V77h49v26"/><circle cx="177" cy="155" r="13"/><circle cx="229" cy="155" r="13"/><path d="M142 53h17m-8-8v16M43 33h40m141 0h38"/>',
-testing:'<rect x="29" y="46" width="102" height="86" rx="6"/><rect x="40" y="57" width="80" height="51" rx="2"/><path d="M53 85l12-13 12 27 14-32 17 18M52 119h12m14 0h12m41-31h35m-9-8 9 8-9 8"/><rect x="173" y="57" width="100" height="85" rx="6"/><path d="M190 89l-9 10 9 10m65-20 9 10-9 10m-30-24-8 29M50 145h61m73 10h78"/>',
-signal:'<path d="M30 140h240M45 155V40m0 60 22-12 16 34 20-66 20 55 16-23 24 17 20-47 20 67 18-32 28 10"/><path d="M68 165h26m15 0h26m15 0h26m15 0h26" stroke-dasharray="4 3"/><circle cx="184" cy="58" r="7"/>',
-drawing:'<path d="M58 23h164l25 25v125H58zM222 23v27h25M78 67h47v41h-17v43m17-43h83V67h-58m-71 72h57v12h50v-24h23m-60-59v39M78 48h51M174 154h53"/><circle cx="149" cy="108" r="7"/><path d="M41 67v84m-6-84h12m-12 84h12M78 186h130m-130-6v12m130-12v12"/>'};
-return `<svg viewBox="0 0 300 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${drawings[type]}</svg>`;
-}
+const buildOrder=['dispenser','club','drone','delivery'];
+const concise={
+ dispenser:{title:'PillDrop',sub:'Voice-controlled medication & water dispenser',role:'Code, electronics, motors & CAD.',award:'Team · 1st place / CETYS Engineering Expo 2023',cover:'media/dispenser-interior-enhanced.webp',tags:'ESP32 / ARDUINO / PCB / CAD'},
+ club:{title:'Built for the track.',sub:'Competition robots · CETYS Robotics Club',role:'Robots I built, from electronics and PCB design to embedded code. Club founding member & president.',award:'1st place / State robotics competition',cover:'media/club-03-enhanced.webp',tags:'EMBEDDED / SENSORS / PID'},
+ drone:{title:'Following the trajectory.',sub:'Autonomous drone · MATLAB & Simulink',role:'I developed all the MATLAB and Simulink code for trajectory tracking and control.',award:'Team · 2nd place / MathWorks National Drone Competition',cover:'media/project-06-enhanced.webp',tags:'MATLAB / SIMULINK / CONTROL'},
+ delivery:{title:'E-Serve',sub:'Autonomous food & water delivery robot',role:'Programming and electronics, integrating ROS, Raspberry Pi, Arduino and LiDAR.',award:'Team · 2nd place / CETYS Engineering Expo 2022',cover:'media/project-05-enhanced.webp',tags:'ROS / LIDAR / RASPBERRY PI'}
+};
+// Photo 5 is a different robot; E-Serve intentionally uses a diagram, not that photo.
+function deliveryArt(){return `<div class="delivery-art" aria-hidden="true"><svg viewBox="0 0 600 440" fill="none" stroke="currentColor" stroke-width="2"><path d="M120 280l180 95 180-95-180-95zM120 280v-90l180-90 180 90v90M120 190l180 95 180-95M300 285v90M210 145v-50l90-45 90 45v50M210 95l90 46 90-46M300 141v90"/><ellipse cx="200" cy="332" rx="24" ry="34"/><ellipse cx="398" cy="332" rx="24" ry="34"/><path d="M135 100Q300-55 465 100M170 120Q300 0 430 120" stroke-dasharray="5 12"/></svg><span>CONCEPT / SYSTEM OVERVIEW</span></div>`;}
 const grid=document.getElementById('project-grid');
-grid.innerHTML=projects.map((p,i)=>`<article class="project-card" data-categories="${p.filters.join(' ')}"><button class="card-open" data-project="${p.id}" aria-label="Explore ${p.label}"><div class="project-visual" style="--visual-bg:${p.color};--visual-ink:${p.ink}"><span class="visual-index">0${i+1}</span>${projectMedia[p.id]?`<img class="card-photo" src="${projectMedia[p.id][0].src}" alt="${projectMedia[p.id][0].caption}" loading="lazy">`:sketch(p.sketch)}<span class="visual-note">${projectMedia[p.id]?"From the build":"Conceptual system sketch"}</span></div><div class="card-content"><div class="card-meta"><span>${p.kind}</span><span>${p.date}</span></div><h3>${p.title}</h3><p>${p.summary}</p><div class="tags">${p.tools.slice(0,3).map(t=>`<span>${t}</span>`).join('')}</div><div class="card-bottom"><span>Explore project</span><span class="card-arrow" aria-hidden="true">↗</span></div></div></button></article>`).join('');
-const dialog=document.getElementById('project-dialog');
-let lastProjectButton=null;
-function openProject(id,trigger){
-const p=projects.find(p=>p.id===id);if(!p)return;lastProjectButton=trigger;
-document.getElementById('case-type').textContent=p.kind;
-document.getElementById('case-body').innerHTML=`<h2 id="case-title">${p.label}</h2><p class="case-summary">${p.summary}</p><div class="case-facts"><p><small>Context</small>${p.kind}</p><p><small>When</small>${p.date}</p></div><div class="case-columns"><section><h3>My contribution</h3><ul>${p.contribution.map(c=>`<li>${c}</li>`).join('')}</ul></section><section><h3>The context</h3><p>${p.context}</p></section></div><div class="case-result"><strong>${['dispenser','delivery','drone'].includes(p.id)?'Team result':'What this work involved'}</strong><p>${p.result}</p></div>${mediaGallery(p)}<section class="system" aria-labelledby="system-title"><h3 id="system-title">Follow the system</h3><p>Select a step to explore the workflow. This is a conceptual overview, not a wiring diagram or a recording of a test.</p><div class="system-nodes" role="group" aria-label="System workflow">${p.nodes.map((n,i)=>`<button class="system-node" data-step="${i}" aria-pressed="${i===0}"><small>0${i+1}</small>${n[0]}</button>`).join('')}</div><div class="system-explanation" role="status">${p.nodes[0][1]}</div></section><div class="case-tools" aria-label="Tools and methods">${p.tools.map(t=>`<span>${t}</span>`).join('')}</div><a class="button case-contact" href="mailto:aaronse513@gmail.com?subject=${encodeURIComponent('About your '+p.label.toLowerCase()+' project')}">Ask me about this work ↗</a>`;
-document.querySelectorAll('.system-node').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.system-node').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.querySelector('.system-explanation').textContent=p.nodes[Number(button.dataset.step)][1];}));
-document.querySelectorAll('[data-media]').forEach(button=>button.addEventListener('click',()=>{
- const m=projectMedia[p.id][Number(button.dataset.media)];
- const viewer=document.getElementById('media-dialog');
- viewer.querySelector('img').src=m.src;viewer.querySelector('img').alt=m.caption;
- viewer.querySelector('p').textContent=m.caption;viewer.showModal();
-}));
-dialog.showModal();dialog.scrollTop=0;document.body.classList.add('modal-open');}
+grid.innerHTML=buildOrder.map((id,i)=>{const c=concise[id];return `<article class="build build-${id} reveal"><button class="build-open" data-project="${id}" aria-label="Explore ${c.title}"><div class="build-visual">${id==='delivery'?deliveryArt():`<img src="${c.cover}" alt="${c.sub}" loading="lazy">`}<span class="build-number">0${i+1}</span><span class="build-arrow" aria-hidden="true">↗</span></div><div class="build-caption"><div><h2>${c.title}</h2><p>${c.sub}</p></div><span class="build-tags">${c.tags}</span></div></button></article>`;}).join('');
+const dialog=document.getElementById('project-dialog');let lastProjectButton;
+function openProject(id,trigger){const p=projects.find(p=>p.id===id),c=concise[id];if(!p||!c)return;lastProjectButton=trigger;document.getElementById('case-type').textContent=p.kind;
+ const media=projectMedia[id]||[];
+ document.getElementById('case-body').innerHTML=`<div class="case-intro"><p class="eyebrow">${c.tags}</p><h2 id="case-title">${c.title}</h2><p class="case-sub">${c.sub}</p><div class="case-role"><span>MY PART</span><p>${c.role}</p></div><p class="case-award">↗ ${c.award}</p></div>${media.length?`<div class="gallery-grid">${media.map((m,i)=>`<figure>${m.type==='video'?`<video controls playsinline preload="none" poster="${m.poster}" aria-label="${m.caption}"><source src="${m.src}" type="video/mp4"></video>`:`<button class="gallery-image" data-media="${i}" aria-label="Enlarge: ${m.caption}"><img src="${m.src}" alt="${m.caption}" loading="lazy"></button>`}<figcaption>${m.caption}</figcaption></figure>`).join('')}</div>`:`<div class="case-diagram">${deliveryArt()}<p>ROS / Raspberry Pi → Arduino → Motors<br>LiDAR → Obstacle detection</p></div>`}`;
+ document.querySelectorAll('[data-media]').forEach(b=>b.addEventListener('click',()=>{const m=media[Number(b.dataset.media)];mediaDialog.querySelector('img').src=m.src;mediaDialog.querySelector('img').alt=m.caption;mediaDialog.querySelector('p').textContent=m.caption;mediaDialog.showModal();}));dialog.showModal();dialog.scrollTop=0;document.body.classList.add('modal-open');}
 document.querySelectorAll('[data-project]').forEach(b=>b.addEventListener('click',()=>openProject(b.dataset.project,b)));
 document.querySelector('.close-dialog').addEventListener('click',()=>dialog.close());
-dialog.addEventListener('click',e=>{const r=dialog.getBoundingClientRect();if(e.target===dialog&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom))dialog.close();});
-dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');lastProjectButton?.focus();});
-function filterProjects(filter){let count=0;document.querySelectorAll('.project-card').forEach(c=>{c.hidden=filter!=='all'&&!c.dataset.categories.split(' ').includes(filter);if(!c.hidden)count++;});document.querySelectorAll('[data-filter]').forEach(b=>{const selected=b.dataset.filter===filter;b.classList.toggle('active',selected);b.setAttribute('aria-pressed',String(selected));});document.getElementById('project-count').textContent=`${count} project${count===1?'':'s'}`;}
-document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>filterProjects(b.dataset.filter)));
-const bench={hardware:{title:'From a component to a working system.',description:'Hardware testing, sensor integration, electronics, and prototypes you can put your hands on.',label:'Explore hardware work',filter:'hardware'},code:{title:'Code that reaches the physical world.',description:'Python instrument control, embedded programming, MATLAB, Simulink, and the logic behind a working prototype.',label:'Explore code & automation',filter:'automation'},motion:{title:'Turning a reference into movement.',description:'Drone trajectory tracking, autonomous delivery, and the sensors and actuators that make robots move.',label:'Explore robotics & control',filter:'robotics'}};
-let benchSelection='hardware';
-document.querySelectorAll('[data-bench]').forEach(b=>b.addEventListener('click',()=>{benchSelection=b.dataset.bench;const c=bench[benchSelection];document.querySelectorAll('[data-bench]').forEach(other=>{other.classList.toggle('active',other===b);other.setAttribute('aria-pressed',String(other===b));});document.getElementById('bench-title').textContent=c.title;document.getElementById('bench-description').textContent=c.description;document.getElementById('bench-link').textContent=c.label+' ↗';}));
-document.getElementById('bench-link').addEventListener('click',()=>filterProjects(bench[benchSelection].filter));
-
-const mediaDialog=document.createElement('dialog');mediaDialog.id='media-dialog';mediaDialog.className='media-dialog';
-mediaDialog.innerHTML='<button class="media-close" aria-label="Close enlarged photo">Close ×</button><img alt=""><p></p>';
-document.body.appendChild(mediaDialog);
-mediaDialog.querySelector('button').addEventListener('click',()=>mediaDialog.close());
-mediaDialog.addEventListener('click',e=>{if(e.target===mediaDialog)mediaDialog.close();});
-dialog.addEventListener('close',()=>dialog.querySelectorAll('video').forEach(v=>v.pause()));
+dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
+dialog.addEventListener('close',()=>{dialog.querySelectorAll('video').forEach(v=>v.pause());document.body.classList.remove('modal-open');lastProjectButton?.focus();});
+const mediaDialog=document.createElement('dialog');mediaDialog.id='media-dialog';mediaDialog.setAttribute('aria-label','Enlarged project photo');mediaDialog.innerHTML='<button aria-label="Close enlarged photo">Close ×</button><img alt=""><p></p>';document.body.appendChild(mediaDialog);mediaDialog.querySelector('button').addEventListener('click',()=>mediaDialog.close());mediaDialog.addEventListener('click',e=>{if(e.target===mediaDialog)mediaDialog.close();});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.build-open').forEach(card=>{card.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const r=card.getBoundingClientRect();card.style.setProperty('--mx',`${((e.clientX-r.left)/r.width-.5)*5}deg`);card.style.setProperty('--my',`${((e.clientY-r.top)/r.height-.5)*-4}deg`);});card.addEventListener('pointerleave',()=>{card.style.setProperty('--mx','0deg');card.style.setProperty('--my','0deg');});});}

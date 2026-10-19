@@ -1,9 +1,11 @@
 # Aaron Esquivel — engineering portfolio
 
-Static portfolio hosted at https://aaronse11.github.io/.
+Live: https://aaronse11.github.io/
 
-Open `index.html` through a local static server. No build step or dependencies.
+Buildless HTML, CSS and JavaScript. Run a static server in this directory.
 
-Features: project filters, accessible project dialogs, interactive system workflows, photo enlargement, and user-controlled video demonstrations. Project photos and videos are supplied by Aaron. Conceptual diagrams are labeled separately.
+The homepage emphasizes four engineering builds, with concise contributions and photo/video galleries. Experience and education remain on the page; full details are in the resume.
 
-Source: `index.html`, `portfolio.css`, and `portfolio.js`.
+Interaction: subtle card tilt, scroll reveals, a moving type strip, native project dialogs, photo enlargement and manually controlled videos. Motion respects `prefers-reduced-motion`.
+
+Project photographs were supplied by Aaron. Photo restoration and the three separated dispenser views use the built-in image editing tool; originals remain in the workspace. The delivery robot graphic is labeled as a concept. Photo 5 depicts a different robot and is used only in the club gallery.
