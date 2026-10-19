@@ -20,14 +20,16 @@ const projectMedia = {
  drone: [{src:'media/project-06-enhanced.webp',caption:'The drone used for the trajectory-tracking project.'}],
  club: [
  {src:'media/club-03-enhanced.webp',caption:'Line-following robots at the competition.'},
+ {src:'media/prototype-early-black.webp',caption:'An early competition prototype.'},
+ {src:'media/prototype-bench.webp',caption:'Prototype electronics on the workbench.'},
+ {src:'media/prototype-early-green.webp',caption:'An early robot build during testing.'},
  {src:'media/club-02-enhanced.webp',caption:'Preparing a mini-sumo robot for a match.'},
- {src:'media/club-01-enhanced.webp',caption:'A club robot on the line-following track.'},
  {src:'media/project-11-enhanced.webp',caption:'Preparing one of my robots on the competition track.'},
  {src:'media/project-07-enhanced.webp',caption:'One of my competition robot builds and its electronics.'},
- {src:'media/project-08-enhanced.webp',caption:'Robot electronics and competition medal.'},
  {src:'media/project-09-enhanced.webp',caption:'Competition robot and recognition.'},
  {src:'media/project-10-enhanced.webp',caption:'Another competition build and recognition.'},
  {src:'media/project-05-enhanced.webp',caption:'Electronics and motor integration on another robot I built.'},
+ {src:'media/prototype-assembly.webp',caption:'Electronics and mechanical assembly during prototyping.'},
  {src:'media/project-12-enhanced.webp',caption:'With the team: 1st place at a state robotics competition.'},
  {src:'media/demo-02.mp4',type:'video',poster:'media/project-07-enhanced.webp',caption:'Line-following robot demonstration.'}]
 };
