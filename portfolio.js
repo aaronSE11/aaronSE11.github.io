@@ -16,7 +16,7 @@ const projectMedia = {
  {src:'media/project-01-enhanced.webp',caption:'3D view of the custom electronics board.'},
  {src:'media/project-02-enhanced.webp',caption:'PCB layout in Proteus.'},
  {src:'media/project-03-enhanced.webp',caption:'CAD model of the dispensing assembly.'},
- {src:'media/demo-01.mp4',type:'video',poster:'media/dispenser-interior-enhanced.webp',caption:'A short look inside the working prototype.'}],
+ {src:'media/pilldrop-alexa-enhanced.mp4',type:'video',poster:'media/dispenser-interior-enhanced.webp',caption:'A short look inside the working prototype.'}],
  drone: [{src:'media/project-06-enhanced.webp',caption:'The drone used for the trajectory-tracking project.'}],
  club: [
  {src:'media/club-03-enhanced.webp',caption:'Line-following robots at the competition.'},
@@ -33,7 +33,7 @@ const projectMedia = {
 };
 const buildOrder=['dispenser','club','drone','delivery'];
 const concise={
- dispenser:{title:'PillDrop',sub:'Voice-controlled medication & water dispenser',role:'Code, electronics, motors & CAD.',award:'Team · 1st place / CETYS Engineering Expo 2023',cover:'media/dispenser-interior-enhanced.webp',tags:'ESP32 / ARDUINO / PCB / CAD'},
+ dispenser:{title:'PillDrop',sub:'Alexa-controlled medication & water dispenser',role:'Alexa voice control, embedded code, electronics, motors & CAD.',award:'Team · 1st place / CETYS Engineering Expo 2023',cover:'media/dispenser-interior-enhanced.webp',tags:'ALEXA / ESP32 / ARDUINO / CAD'},
  club:{title:'Built for the track.',sub:'Competition robots · CETYS Robotics Club',role:'Robots I built, from electronics and PCB design to embedded code. Club founding member & president.',award:'1st place / State robotics competition',cover:'media/club-03-enhanced.webp',tags:'EMBEDDED / SENSORS / PID'},
  drone:{title:'Following the trajectory.',sub:'Autonomous drone · MATLAB & Simulink',role:'I developed all the MATLAB and Simulink code for trajectory tracking and control.',award:'Team · 2nd place / MathWorks National Drone Competition',cover:'media/project-06-enhanced.webp',tags:'MATLAB / SIMULINK / CONTROL'},
  delivery:{title:'E-Serve',sub:'Autonomous food & water delivery robot',role:'Programming and electronics, integrating ROS, Raspberry Pi, Arduino and LiDAR.',award:'Team · 2nd place / CETYS Engineering Expo 2022',cover:'media/project-05-enhanced.webp',tags:'ROS / LIDAR / RASPBERRY PI'}
