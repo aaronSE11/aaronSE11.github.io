@@ -32,3 +32,7 @@
 /* Project contribution details */
 .role-copy p{margin:0;font-size:14px;line-height:1.85;max-width:740px}.role-copy p+p{margin-top:18px}.close-dialog,#media-dialog>button{font-family:Arial,sans-serif;font-size:22px;line-height:1;width:44px;height:44px;padding:0;display:grid;place-items:center;flex-shrink:0}.experience-list .institution-name{font-size:23px;line-height:1.35;max-width:760px;text-wrap:pretty}
 @media(max-width:680px){.role-copy p{font-size:13px;line-height:1.8}.experience-list .institution-name{font-size:20px}}
+
+/* Consistent contact typography */
+.contact-bottom>div{display:flex;flex-wrap:wrap;gap:20px 38px;align-items:center}.contact-bottom a{font-family:var(--sans);font-size:18px;line-height:1.6;color:var(--text)}.contact-title{font-size:clamp(26px,3.5vw,42px);line-height:1.35}.contact-bottom{margin-top:30px}footer{justify-content:space-between;font-size:14px}footer .footer-location{visibility:hidden}footer a{font-size:14px}
+@media(max-width:680px){.contact-bottom>div{gap:18px 30px}.contact-bottom a{font-size:17px}.contact-title{font-size:clamp(23px,5vw,32px)}footer .footer-location{display:none}footer{justify-content:flex-end}footer a{font-size:14px}}
